@@ -36,7 +36,7 @@ public class DatosPersonas {
         JOptionPane.showMessageDialog(null, "Gracias por completar con los datos");
 
         //Impresión de los datos ingresados por consola
-        System.out.println("Registramos sus datos correctamente \n");
+        System.out.println("\n Registramos sus datos correctamente \n");
         System.out.println("Nombre: " + nombre + " - " + " Apellido: " + apellido);
         System.out.println("Edad: " + edad);
         System.out.println("Hobbie: " + hobbie);
