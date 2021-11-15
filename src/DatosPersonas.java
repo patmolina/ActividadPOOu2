@@ -7,7 +7,7 @@ public class DatosPersonas {
 
         JOptionPane.showMessageDialog(null, "B I E N V E N I D O \n Registro de datos"); // Msje bienvenida
 
-        // Ingreso de la informaci[on solicitada. Si no cumple con las validaciones vuelve a solicitar el ingreso
+        // Ingreso de la información solicitada. Si no cumple con las validaciones vuelve a solicitar el ingreso
         String nombre = JOptionPane.showInputDialog(null, "Ingrese su Nombre");
         while (!validarNomAp(nombre) || nombre.isEmpty()) {
             nombre = JOptionPane.showInputDialog(null, "Debe ingresar un nombre válido");
@@ -28,7 +28,7 @@ public class DatosPersonas {
         while (!validarSopEdHob(editor) || editor.isEmpty()) {
             editor = JOptionPane.showInputDialog(null, "Debe ingresar un editor válido");
         }
-        String sistOp = JOptionPane.showInputDialog(null, "Qué sistema operativo utiliza?"); // Ingresar Sist Operativo
+        String sistOp = JOptionPane.showInputDialog(null, "Qué sistema operativo utiliza?");
         while (!validarSopEdHob(sistOp) || sistOp.isEmpty()) {
             sistOp = JOptionPane.showInputDialog(null, "Debe indicar un sistema operativo válido");
         }
@@ -45,12 +45,12 @@ public class DatosPersonas {
 
     }
     public static boolean validarNomAp(String texto){  // validar datos con caracteres de texto y espacios
-            return texto.matches("[a-z,A-z, ]*");
+            return texto.matches("[a-zA-z ]*");
         }
     public static boolean validarEdad (String num){  // validar datos con caracteres numéricos y hasta 2 dígitos
             return num.matches("[0-9]{1,2}");
         }
     public static boolean validarSopEdHob(String texto1) {  // validar datos con caracteres de texto y número, . y espacios
-        return texto1.matches("[a-z,A-z,0-9,., ]*");
+        return texto1.matches("[a-zA-z0-9. ]*");
     }
 } //Fin del programa
